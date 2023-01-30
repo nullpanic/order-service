@@ -1,0 +1,10 @@
+
+CREATE TABLE ORDERS
+(
+    ID BIGINT,
+    AMOUNT INT,
+    USERID BIGINT,
+    PRIMARY KEY (ID)
+
+);
+
