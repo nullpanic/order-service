@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-ordered_cars
+      author: no
+      changes:
+        - createTable:
+            tableName: ORDERED_CARS
+            columns:
+              - column:
+                  name: ID
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: AMOUNT
+                  type: INT
+                  constraints:
+                    primaryKey: false
+                    nullable: false
+              - column:
+                  name: QUANTITY
+                  type: INT
+                  constraints:
+                    primaryKey: false
+                    nullable: false
+              - column:
+                  name: IDOFCAR
+                  type: BIGINT
+                  constraints:
+                    primaryKey: false
+                    nullable: false
+              - column:
+                  name: ORDER_ID
+                  type: BIGINT
+                  constraints:
+                    primaryKey: false
+                    nullable: false
+                    foreignKeyName: fk_order_id
+                    references: ORDERS(id)
